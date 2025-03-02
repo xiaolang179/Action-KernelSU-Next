@@ -72,6 +72,11 @@ jobs:
          rm kernel_platform/msm-kernel/android/abi_gki_protected_exports_* || echo "No protected exports!"
          sed -i 's/ -dirty//g' kernel_platform/common/scripts/setlocalversion
          sed -i 's/ -dirty//g' kernel_platform/msm-kernel/scripts/setlocalversion
+         
+      - name: Set susfs set
+        run: |
+         cd kernel_workspace/kernel_platform
+         sed -i 's/CONFIG_KSU_SUSFS_SUS_SU=y/CONFIG_KSU_SUSFS_SUS_SU=n/' "./common/arch/arm64/configs/gki_defconfig"
 
       - name: Set up KernelSU Next
         if: github.event.inputs.KSUNEXT_ENABLED == 'true'
