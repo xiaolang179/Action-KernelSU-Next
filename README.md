@@ -1,7 +1,7 @@
 
 > [!CAUTION]
 > 
->请fork本分支项目（Numbersf/Action-KernelSU-Next）而不是原项目或者其他项目 他们并不适配你这个机型!
+>请fork本分支项目（Numbersf/Action-KernelSU-Next）而不是原项目或者其他项目 其他并不适配你这个机型!
  
 [![Channel](https://img.shields.io/badge/Follow-Telegram-blue.svg?logo=telegram)](https://t.me/taichi91) 
  
@@ -10,7 +10,7 @@
 #
 # 更新日志:
 - 适配更多机型
-- 新增自动**下载**susfs模块最新release版或者最新ci版模块可自己选择
+- 新增自动**下载**susfs模块最新release版或最新ci版可自己选择,**TWRP可能不会自动安装**
 - 优化部分代码,调用新的patch
 - 修复部分机型-dirty后缀问题 感谢酷安九霄y、慕容雪绒提供的帮助
 - 调用vfs钩子取代kp
