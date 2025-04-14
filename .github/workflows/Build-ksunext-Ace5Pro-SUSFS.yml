@@ -25,7 +25,7 @@ on:
       BUILD_METHOD:
         description: "编译方式"
         required: true
-        default: 'gki'
+        default: 'perf'
       KSUNEXT_ENABLED:
         description: "添加 KSU Next"
         required: true
