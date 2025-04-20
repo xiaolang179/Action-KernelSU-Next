@@ -1,9 +1,8 @@
-
+[![Build](https://img.shields.io/badge/GitHub%20Actions-Build-181717?logo=github&logoColor=white&style=flat-square)](https://github.com/Numbersf/Action-KernelSU-Next/actions) [![Channel](https://img.shields.io/badge/Follow-Telegram-blue.svg?logo=telegram)](https://t.me/taichi91) [![OnePlus Kernel Manifest](https://img.shields.io/badge/OnePlus%20Kernel%20Manifest-EB0029?logo=oneplus&logoColor=white&style=flat-square)](https://github.com/OnePlusOSS/kernel_manifest)
+ 
 > [!CAUTION]
 > 
 >请fork本分支项目（Numbersf/Action-KernelSU-Next）而不是原项目或者其他项目 其他并不适配你这个机型!
- 
-[![Channel](https://img.shields.io/badge/Follow-Telegram-blue.svg?logo=telegram)](https://t.me/taichi91) 
  
 # 公告
 **Ace3V和Ace5有问题就多跑几次**
