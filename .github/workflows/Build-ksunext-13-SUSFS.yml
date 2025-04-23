@@ -1,31 +1,31 @@
-name: New KernelSU Next SUSFS Ace3Pro
+name: New KernelSU Next SUSFS 13
 on:
   workflow_dispatch:
     inputs:
       CPU:
         description: "分支"
         required: true
-        default: 'sm8650'
+        default: 'sm8750'
       FEIL:
         description: "配置文件"
         required: true
-        default: 'oneplus_ace3_pro_v'
+        default: 'oneplus_13'
       CPUD:
         description: "处理器代号"
         required: true
-        default: 'pineapple'
+        default: 'sun'
       ANDROID_VERSION:
         description: "内核安卓版本"
         required: true
-        default: 'android14'
+        default: 'android15'
       KERNEL_VERSION:
         description: "内核版本"
         required: true
-        default: '6.1'
+        default: '6.6'
       BUILD_METHOD:
         description: "编译方式"
         required: true
-        default: 'gki'
+        default: 'perf'
       KSUNEXT_ENABLED:
         description: "添加 KSU Next"
         required: true
@@ -160,7 +160,7 @@ jobs:
         run: |
           git clone https://github.com/Numbersf/AnyKernel3 --depth=1
           rm -rf ./AnyKernel3/.git
-          cp kernel_workspace/kernel_platform/out/msm-kernel-${{ github.event.inputs.CPUD }}-gki/dist/Image ./AnyKernel3/
+          cp kernel_workspace/kernel_platform/out/msm-kernel-${{ github.event.inputs.CPUD }}-perf/dist/Image ./AnyKernel3/
 
       - name: Download Latest SUSFS Module from CI
         if: ${{ github.event.inputs.SUSFS_CI == 'true' }}
