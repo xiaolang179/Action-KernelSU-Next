@@ -84,7 +84,7 @@ on:
           - perf
       SUFFIX:
         type: string
-        description: "自定义内核后缀 (留空则使用随机字符串)"
+        description: "自定义内核后缀"
         required: false
         default: ""
       SUSFS_CI:
