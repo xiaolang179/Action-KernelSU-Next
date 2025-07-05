@@ -71,6 +71,12 @@ on:
         required: true
         default: false
 jobs:
+  get-config:
+    uses: ./.github/workflows/file-map.yml
+    with:
+      FILE: ${{ inputs.FILE }}
+    secrets: inherit
+
   build:
     needs: get-config
     name: ${{ github.event.inputs.FAST_BUILD == 'true' && ' [FAST]' || '' }}${{ github.event.inputs.SCHED == 'true' && ' [SCHED]' || '' }}For ${{ github.event.inputs.FILE }} ${{ github.event.inputs.BUILD_METHOD }} ${{ github.event.inputs.SUFFIX }}
