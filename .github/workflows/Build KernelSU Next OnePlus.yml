@@ -338,7 +338,7 @@ jobs:
       - name: Set up susfs
         run: |
           cd kernel_workspace
-          git clone https://gitlab.com/simonpunk/susfs4ksu.git -b gki-${{ github.event.inputs.ANDROID_VERSION }}-${{ github.event.inputs.KERNEL_VERSION }}
+          git clone https://gitlab.com/simonpunk/susfs4ksu.git -b gki-${{ needs.get-config.outputs.ANDROID_VERSION }}-${{ needs.get-config.outputs.KERNEL_VERSION }}
           git clone https://github.com/WildPlusKernel/kernel_patches.git
           cd kernel_platform
           echo "正在拉取susfs补丁"
