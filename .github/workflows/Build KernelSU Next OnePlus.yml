@@ -436,7 +436,7 @@ jobs:
           cd kernel_platform
           echo "正在拉取susfs补丁"
           cp ../susfs4ksu/kernel_patches/50_add_susfs_in_gki-${{ env.KANDROID_VERSION }}-${{ env.KERNEL_VERSION }}.patch ./common/
-          cp ../kernel_patches/next/scope_min_manual_hooks_v1.4.patch ./common/
+          cp ../kernel_patches/next/scope_min_manual_hooks_v1.5.patch ./common/
           cp ../susfs4ksu/kernel_patches/fs/* ./common/fs/
           cp ../susfs4ksu/kernel_patches/include/linux/* ./common/include/linux/
 
@@ -473,7 +473,7 @@ jobs:
           # Replace next_hooks.patch with syscall_hooks.patch
           cp ../../kernel_patches/69_hide_stuff.patch ./
           patch -p1 -F 3 < 69_hide_stuff.patch
-          patch -p1 --fuzz=3 < scope_min_manual_hooks_v1.4.patch
+          patch -p1 --fuzz=3 < scope_min_manual_hooks_v1.5.patch
 
       # OGKI转换GKI，无需修改 dtbo 开机
       - name: Apply Convert HMBIRD_OGKI to HMBIRD_GKI
